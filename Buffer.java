@@ -17,8 +17,8 @@ public class Buffer{
 			while(numberOfElements == maxSize){
 				wait();
 			}
-			rear = (rear + 1) % maxSize; 
 			circularBuffer[rear] = d;
+			rear = (rear + 1) % maxSize; 
 			numberOfElements++;
 			notify();
 		}catch(InterruptedException ex){
